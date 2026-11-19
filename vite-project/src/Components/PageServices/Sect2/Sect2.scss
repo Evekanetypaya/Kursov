@@ -1,0 +1,210 @@
+.servicesSect2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #f2f6f8;
+    .containerWrapper {
+        width: 94vw;
+        max-width: 1184px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        .textContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+            .subtitle {
+                color: #82a8a5;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+            .mainTitle {
+                color: #111111;
+                font-family: "Georgia", serif;
+                font-size: 38px;
+                font-weight: 600;
+                line-height: 1.25;
+                margin: 0;
+            }
+            .desc {
+                color: #777777;
+                font-size: 15px;
+                line-height: 1.6;
+                margin: 0;
+                max-width: 600px;
+            }
+        }
+        .offerCard {
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            border: 1px solid #d0d5d8; 
+            .contactBox {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 30px 50px;
+                gap: 24px;
+                background-color: #ffffff;
+                .contactRow {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 16px;
+                    .dots {
+                        color: #82a8a5; 
+                        font-size: 22px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        line-height: 1;
+                    }
+
+                    .textCol {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        .label {
+                            color: #111111;
+                            font-size: 11px;
+                            font-weight: 700;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                        }
+                        .value {
+                            color: #555555;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .discountBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #212c2e;
+                color: #ffffff;
+                padding: 40px 60px;
+                gap: 5px;
+                .discountTop {
+                    font-size: 11px;
+                    font-weight: 600;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                }
+                .discountValue {
+                    font-family: "Georgia", serif;
+                    font-size: 64px;
+                    font-weight: 600;
+                    line-height: 1;
+                }
+                .discountBottom {
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .servicesSect2 {
+        padding: 60px 0;
+
+        .containerWrapper {
+            gap: 40px;
+
+            .textContent {
+                .mainTitle {
+                    font-size: 32px;
+                }
+
+                .desc {
+                    font-size: 14px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .offerCard {
+                .contactBox {
+                    padding: 28px 36px;
+                    gap: 20px;
+                }
+
+                .discountBox {
+                    padding: 32px 44px;
+
+                    .discountValue {
+                        font-size: 54px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .servicesSect2 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 32px;
+
+            .textContent {
+                gap: 12px;
+
+                .mainTitle {
+                    font-size: 26px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                .desc {
+                    font-size: 13px;
+                }
+            }
+
+            .offerCard {
+                flex-direction: column;
+                width: 100%;
+                max-width: 360px;
+
+                .contactBox {
+                    padding: 24px 20px;
+                    gap: 18px;
+
+                    .contactRow {
+                        gap: 12px;
+
+                        .dots {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .discountBox {
+                    padding: 28px 20px;
+
+                    .discountValue {
+                        font-size: 48px;
+                    }
+
+                    .discountBottom {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

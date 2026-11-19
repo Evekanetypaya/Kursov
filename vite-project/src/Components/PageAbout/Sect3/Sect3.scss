@@ -1,0 +1,175 @@
+.aboutSect3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #ffffff;
+    .containerWrapper {
+        width: 94vw;
+        max-width: 1184px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        .headerBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+            .sectionSubtitle {
+                color: #82a8a5;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+
+            .sectionTitle {
+                color: #111111;
+                font-family: "Georgia", serif;
+                font-size: 38px;
+                font-weight: 600;
+                line-height: 1.3;
+                margin: 0;
+            }
+        }
+        .expertsGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+            .expertCard {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 24px;
+                .expertImg {
+                    width: 100%;
+                    height: 360px;
+                    object-fit: cover;
+                }
+                .expertInfo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 12px;
+                    .expertName {
+                        color: #111111;
+                        font-family: "Georgia", serif;
+                        font-size: 22px;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+                    .expertRole {
+                        color: #82a8a5;
+                        font-size: 10px;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                    }
+                    .expertDesc {
+                        color: #777777;
+                        font-size: 13px;
+                        line-height: 1.6;
+                        margin: 0;
+                        padding: 0 10px;
+                    }
+                }
+                .socialsRow {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 20px;
+                    .socialLink {
+                        transition: opacity 0.2s ease;
+                        img {
+                            width: 12px;
+                            height: 12px;
+                            object-fit: contain;
+                        }
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .aboutSect3 {
+        padding: 60px 0;
+
+        .containerWrapper {
+            gap: 44px;
+
+            .headerBlock {
+                .sectionTitle {
+                    font-size: 32px;
+                }
+            }
+
+            .expertsGrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                .expertCard {
+                    gap: 20px;
+
+                    .expertImg {
+                        height: 320px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutSect3 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 32px;
+
+            .headerBlock {
+                gap: 12px;
+
+                .sectionTitle {
+                    font-size: 26px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .expertsGrid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+
+                .expertCard {
+                    gap: 18px;
+
+                    .expertImg {
+                        height: 300px;
+                    }
+
+                    .expertInfo {
+                        gap: 8px;
+
+                        .expertName {
+                            font-size: 20px;
+                        }
+
+                        .expertDesc {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

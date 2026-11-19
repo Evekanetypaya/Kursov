@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.glavSect7 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 97px 0;
+    background-color: #ebf3f5;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+    }
+    .containerWrapper {
+        width: 900px;
+        max-width: 94vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        .infoBlock {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            .subtitle {
+                color: #5f8791;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .mainTitle {
+                margin-top: 10px;
+                color: #111111;
+                font-family: "Playfair Display", serif;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 44px;
+            }
+            .infoText {
+                margin-top: 12px;
+                color: #555555;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+            .contactBox {
+                margin-top: 28px;
+                display: flex;
+                flex-direction: row;
+                width: 343px;
+                height: 110px;
+
+                .contactList {
+                    flex: 1;
+                    padding: 0 18px 0 24px;
+                    background-color: #ffffff;
+                    border: 1px solid #b7d5de;
+                    border-right: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 16px;
+
+                    .contactItem {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        gap: 12px;
+
+                        .contactDots {
+                            width: 25px;
+                            height: 5px;
+                            margin-top: 6px;
+                            flex-shrink: 0;
+                        }
+
+                        .contactText {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3px;
+
+                            .contactLabel {
+                                color: #111111;
+                                font-size: 10px;
+                                font-weight: 700;
+                                letter-spacing: 0.5px;
+                            }
+
+                            .contactValue {
+                                color: #111111;
+                                font-size: 11px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+
+                .discountBox {
+                    width: 126px;
+                    flex-shrink: 0;
+                    background-color: #1f2a2d;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2px;
+
+                    .discountTop {
+                        color: #ffffff;
+                        font-size: 9px;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                    }
+
+                    .discountNum {
+                        color: #ffffff;
+                        font-size: 40px;
+                        font-weight: 700;
+                        line-height: 44px;
+
+                        small {
+                            font-size: 22px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .discountBottom {
+                        color: #ffffff;
+                        font-size: 13px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .formCard {
+            width: 412px;
+            flex-shrink: 0;
+            padding: 51px 57px 39px;
+            background-color: #ffffff;
+            box-shadow: 0 20px 45px rgba(95, 135, 145, 0.14);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            .fieldWrap {
+                position: relative;
+                height: 48px;
+                border: 1px solid #8fb3be;
+                background-color: #ffffff;
+                .fieldIcon {
+                    position: absolute;
+                    left: 12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 16px;
+                    height: 16px;
+                    object-fit: contain;
+                    pointer-events: none;
+                }
+                .fieldInput {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 12px 0 41px;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    color: #222222;
+                    font-size: 13px;
+                    font-weight: 400;
+                    &::placeholder {
+                        color: #555555;
+                    }
+                }
+                &:focus-within {
+                    border-color: #5f8791;
+                }
+            }
+            .fieldArea {
+                height: 102px;
+                .fieldIcon {
+                    top: 14px;
+                    transform: none;
+                }
+                .fieldTextarea {
+                    width: 100%;
+                    height: 100%;
+                    padding: 14px 12px 0 41px;
+                    border: none;
+                    outline: none;
+                    resize: none;
+                    background: transparent;
+                    color: #222222;
+                    font-size: 13px;
+                    font-weight: 400;
+
+                    &::placeholder {
+                        color: #555555;
+                    }
+                }
+            }
+
+            .submitBtn {
+                height: 48px;
+                margin-top: -3px;
+                border: none;
+                background-color: #5f8791;
+                color: #ffffff;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 1.3px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #4d7580;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .glavSect7 {
+        padding: 60px 0;
+
+        .containerWrapper {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 50px;
+
+            .infoBlock {
+                width: 100%;
+
+                .mainTitle {
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+
+                .contactBox {
+                    width: 100%;
+                    max-width: 380px;
+                }
+            }
+
+            .formCard {
+                width: 100%;
+                max-width: 520px;
+                align-self: center;
+                padding: 36px 32px 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .glavSect7 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 40px;
+
+            .infoBlock .mainTitle {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .formCard {
+                padding: 28px 20px 24px;
+            }
+        }
+    }
+}

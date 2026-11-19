@@ -1,0 +1,275 @@
+.contactSect1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .heroPart {
+        width: 100%;
+        background-color: #374648;
+        padding: 120px 0;
+        display: flex;
+        justify-content: center;
+        .containerWrapper {
+            width: 94vw;
+            max-width: 1184px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            .heroSubtitle {
+                color: #a5c3c1;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+            .heroTitle {
+                color: #ffffff;
+                font-family: "Georgia", serif;
+                font-size: 42px;
+                font-weight: 600;
+                line-height: 1.3;
+                margin: 0;
+            }
+        }
+    }
+    .infoPart {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+        .containerWrapper {
+            width: 94vw;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            .contentGrid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 80px; 
+                align-items: center;
+                .imageCol {
+                    position: relative;
+                    width: 100%;
+                    max-width: 420px;
+                    .decorativeSquare {
+                        position: absolute;
+                        top: -20px;
+                        left: -20px;
+                        width: 90%;
+                        height: 90%;
+                        background-color: #a5c3c1;
+                        z-index: 1;
+                    }
+                    .storeImg {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        z-index: 2;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                    }
+                }
+                .textCol {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .sectionSubtitle {
+                        color: #82a8a5;
+                        font-size: 11px;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                    }
+                    .sectionTitle {
+                        color: #111111;
+                        font-family: "Georgia", serif;
+                        font-size: 38px;
+                        font-weight: 600;
+                        line-height: 1.25;
+                        margin: 0;
+                    }
+                    .sectionDesc {
+                        color: #777777;
+                        font-size: 14px;
+                        line-height: 1.6;
+                        margin: 0;
+                        margin-bottom: 20px;
+                    }
+                    .contactList {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        .contactItem {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 20px;
+                            .iconBox {
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid #d0d5d8;
+                                flex-shrink: 0;
+                                .itemIcon {
+                                    width: 20px;
+                                    height: 20px;
+                                    object-fit: contain;
+                                }
+                            }
+                            .itemText {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+                                .itemLabel {
+                                    color: #111111;
+                                    font-size: 14px;
+                                    font-family: "Georgia", serif;
+                                    font-weight: 600;
+                                }
+                                .itemValue {
+                                    color: #555555;
+                                    font-size: 11px;
+                                    font-weight: 600;
+                                    letter-spacing: 0.5px;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .contactSect1 {
+        .heroPart {
+            padding: 80px 0;
+
+            .containerWrapper {
+                gap: 16px;
+
+                .heroTitle {
+                    font-size: 34px;
+                }
+            }
+        }
+
+        .infoPart {
+            padding: 60px 0;
+
+            .containerWrapper {
+                .contentGrid {
+                    grid-template-columns: 1fr;
+                    gap: 50px;
+
+                    .imageCol {
+                        margin: 0 auto;
+                    }
+
+                    .textCol {
+                        gap: 16px;
+
+                        .sectionTitle {
+                            font-size: 32px;
+                        }
+
+                        .sectionDesc {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contactSect1 {
+        .heroPart {
+            padding: 60px 0;
+
+            .containerWrapper {
+                gap: 14px;
+
+                .heroTitle {
+                    font-size: 26px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .infoPart {
+            padding: 48px 0;
+
+            .containerWrapper {
+                .contentGrid {
+                    gap: 36px;
+
+                    .imageCol {
+                        max-width: 100%;
+
+                        .decorativeSquare {
+                            top: -12px;
+                            left: -12px;
+                        }
+                    }
+
+                    .textCol {
+                        gap: 14px;
+
+                        .sectionTitle {
+                            font-size: 26px;
+
+                            br {
+                                display: none;
+                            }
+                        }
+
+                        .sectionDesc {
+                            font-size: 13px;
+                            margin-bottom: 8px;
+                        }
+
+                        .contactList {
+                            gap: 18px;
+
+                            .contactItem {
+                                gap: 14px;
+
+                                .iconBox {
+                                    width: 44px;
+                                    height: 44px;
+
+                                    .itemIcon {
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                }
+
+                                .itemText {
+                                    gap: 4px;
+
+                                    .itemLabel {
+                                        font-size: 13px;
+                                    }
+
+                                    .itemValue {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

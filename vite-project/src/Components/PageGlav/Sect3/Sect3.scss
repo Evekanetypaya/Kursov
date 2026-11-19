@@ -1,0 +1,179 @@
+.glavSect3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: #f2f6f8;
+    .containerWrapper {
+        width: 94vw;
+        max-width: 1184px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        .textContent {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-right: 40px;
+            .subtitle {
+                color: #888888;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .mainTitle {
+                color: #111111;
+                font-family: "Georgia", serif;
+                font-size: 38px;
+                font-weight: 600;
+                line-height: 1.2;
+                margin: 0;
+            }
+            .descriptionText {
+                color: #666666;
+                font-size: 14px;
+                line-height: 1.6;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            .featuresRow {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                .featureBox {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 120px;
+                    height: 145px;
+                    background-color: #ffffff;
+                    border: 1px solid #7c8b8f;
+                    gap: 16px;
+                    padding: 15px 10px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                        transform: translateY(-2px);
+                        border-color: #111111;
+                    }
+                    .featureIcon {
+                        width: 48px; 
+                        height: 48px;
+                        object-fit: contain;
+                    }
+                    .featureText {
+                        color: #111111;
+                        font-family: "Georgia", serif;
+                        font-size: 15px;
+                        font-weight: 600;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+        .imageContent {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            .imageWrapper {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                .decorativeBg {
+                    position: absolute;
+                    top: -30px;
+                    right: -30px;
+                    width: 90%;
+                    height: 90%;
+                    background-color: #82a8a5;
+                }
+                .mainImg {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    z-index: 2;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .glavSect3 {
+        padding: 60px 0;
+        overflow: hidden;
+
+        .containerWrapper {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 40px;
+
+            .textContent {
+                padding-right: 0;
+
+                .mainTitle {
+                    font-size: 32px;
+                }
+
+                .featuresRow {
+                    flex-wrap: wrap;
+
+                    .featureBox {
+                        flex: 1 1 0;
+                        min-width: 110px;
+                        width: auto;
+                    }
+                }
+            }
+
+            .imageContent {
+                padding: 0 30px 10px 0;
+
+                .imageWrapper {
+                    max-width: 420px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .glavSect3 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 32px;
+
+            .textContent {
+                gap: 16px;
+
+                .mainTitle {
+                    font-size: 28px;
+                }
+
+                .featuresRow {
+                    gap: 12px;
+
+                    .featureBox {
+                        flex: 1 1 calc(50% - 6px);
+                        height: 130px;
+                    }
+                }
+            }
+
+            .imageContent .imageWrapper .decorativeBg {
+                top: -16px;
+                right: -16px;
+            }
+        }
+    }
+}

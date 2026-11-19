@@ -1,0 +1,46 @@
+services:
+  # 1. Контейнер базы данных PostgreSQL
+  postgres:
+    image: postgres:16
+    container_name: beautyness_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: beautyness_db
+    ports:
+      - "5433:5432"
+    volumes:
+      # Постоянное хранилище базы
+      - beautyness_postgres_data:/var/lib/postgresql/data
+      # Автоматическое наполнение таблицами и данными при первом старте
+      - ./server/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d beautyness_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 2. Контейнер API-сервера (Node.js + Express)
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: beautyness_api
+    restart: unless-stopped
+    environment:
+      PORT: 5001
+      PGHOST: postgres
+      PGPORT: 5432
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: beautyness_db
+    ports:
+      - "5001:5001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  beautyness_postgres_data:
+    name: beautyness_postgres_data

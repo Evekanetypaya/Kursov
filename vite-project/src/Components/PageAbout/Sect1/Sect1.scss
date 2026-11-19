@@ -1,0 +1,241 @@
+.aboutSect1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .heroPart {
+        width: 100%;
+        background-color: #1E2C30; 
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0;
+        display: flex;
+        justify-content: center;
+        .containerWrapper {
+            width: 94vw;
+            max-width: 1184px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+            .heroSubtitle {
+                color: #a5c3c1;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+            .heroTitle {
+                color: #ffffff;
+                font-family: "Georgia", serif;
+                font-size: 42px;
+                font-weight: 600;
+                line-height: 1.3;
+                margin: 0;
+            }
+            .reservationBtn {
+                margin-top: 10px;
+                background-color: #799d9b;
+                color: #ffffff;
+                border: none;
+                padding: 16px 36px;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+    .valuesPart {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+
+        .containerWrapper {
+            width: 94vw;
+            max-width: 1184px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            .valuesHeader {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 16px;
+                .valuesSubtitle {
+                    color: #82a8a5;
+                    font-size: 11px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                .valuesTitle {
+                    color: #111111;
+                    font-family: "Georgia", serif;
+                    font-size: 34px;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+            .valuesList {
+                width: 100%;
+                max-width: 600px; 
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .valueItem {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 30px;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid #eeeeee;
+                    &:last-child {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                    .iconWrapper {
+                        width: 80px;
+                        height: 80px;
+                        flex-shrink: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #7c8b8f; 
+                        background-color: #ffffff;
+                        .valueIcon {
+                            width: 36px;
+                            height: 36px;
+                            object-fit: contain;
+                        }
+                    }
+                    .textCol {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        padding-top: 4px;
+                        .itemTitle {
+                            color: #111111;
+                            font-family: "Georgia", serif;
+                            font-size: 18px;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                        .itemDesc {
+                            color: #777777;
+                            font-size: 13px;
+                            line-height: 1.6;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .aboutSect1 {
+        .heroPart {
+            padding: 80px 0;
+
+            .containerWrapper {
+                gap: 20px;
+
+                .heroTitle {
+                    font-size: 34px;
+                }
+            }
+        }
+
+        .valuesPart {
+            padding: 70px 0;
+
+            .containerWrapper {
+                gap: 44px;
+
+                .valuesHeader .valuesTitle {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutSect1 {
+        .heroPart {
+            padding: 60px 0;
+
+            .containerWrapper {
+                gap: 16px;
+
+                .heroTitle {
+                    font-size: 26px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                .reservationBtn {
+                    padding: 14px 28px;
+                    width: 100%;
+                    max-width: 260px;
+                }
+            }
+        }
+
+        .valuesPart {
+            padding: 50px 0;
+
+            .containerWrapper {
+                gap: 36px;
+
+                .valuesHeader .valuesTitle {
+                    font-size: 24px;
+                }
+
+                .valuesList {
+                    gap: 24px;
+
+                    .valueItem {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        gap: 16px;
+                        padding-bottom: 24px;
+
+                        .iconWrapper {
+                            width: 64px;
+                            height: 64px;
+
+                            .valueIcon {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                        .textCol {
+                            gap: 8px;
+                            padding-top: 0;
+
+                            .itemTitle {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

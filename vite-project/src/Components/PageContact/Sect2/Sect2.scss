@@ -1,0 +1,199 @@
+.contactSect2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #f2f6f8; 
+    .containerWrapper {
+        width: 94vw;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        .headerBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+            .sectionSubtitle {
+                color: #82a8a5;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+            .sectionTitle {
+                color: #111111;
+                font-family: "Georgia", serif;
+                font-size: 38px;
+                font-weight: 600;
+                margin: 0;
+            }
+            .sectionDesc {
+                color: #777777;
+                font-size: 14px;
+                line-height: 1.6;
+                margin: 0;
+            }
+        }
+        .formCard {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 60px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            .appointmentForm {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .inputGroup {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: 1px solid #d0d5d8; 
+                    padding: 0 20px;
+                    background-color: #ffffff;
+                    height: 54px; 
+                    transition: border-color 0.3s ease;
+                    &:focus-within {
+                        border-color: #82a8a5; 
+                    }
+                    &.textareaGroup {
+                        height: auto;
+                        align-items: flex-start;
+                        padding-top: 16px;
+                    }
+                    .inputIcon {
+                        width: 16px;
+                        height: 16px;
+                        object-fit: contain;
+                        margin-right: 16px;
+                    }
+                    .formInput {
+                        flex: 1;
+                        border: none;
+                        outline: none;
+                        height: 100%;
+                        font-size: 14px;
+                        color: #111111;
+                        background: transparent;
+                        &::placeholder {
+                            color: #888888;
+                        }
+                    }
+                    .formTextarea {
+                        flex: 1;
+                        border: none;
+                        outline: none;
+                        min-height: 120px;
+                        font-size: 14px;
+                        color: #111111;
+                        background: transparent;
+                        resize: vertical;
+                        &::placeholder {
+                            color: #888888;
+                        }
+                    }
+                }
+                .submitBtn {
+                    width: 100%;
+                    background-color: #799d9b;
+                    color: #ffffff;
+                    border: none;
+                    padding: 18px;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: opacity 0.3s ease;
+                    margin-top: 10px;
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .contactSect2 {
+        padding: 60px 0;
+
+        .containerWrapper {
+            gap: 40px;
+
+            .headerBlock {
+                .sectionTitle {
+                    font-size: 32px;
+                }
+
+                .sectionDesc br {
+                    display: none;
+                }
+            }
+
+            .formCard {
+                padding: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contactSect2 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 32px;
+
+            .headerBlock {
+                gap: 12px;
+
+                .sectionTitle {
+                    font-size: 26px;
+                }
+
+                .sectionDesc {
+                    font-size: 13px;
+                }
+            }
+
+            .formCard {
+                padding: 28px 20px 24px;
+
+                .appointmentForm {
+                    gap: 16px;
+
+                    .inputGroup {
+                        height: 48px;
+                        padding: 0 16px;
+
+                        &.textareaGroup {
+                            padding-top: 14px;
+                        }
+
+                        .inputIcon {
+                            margin-right: 12px;
+                        }
+
+                        .formInput,
+                        .formTextarea {
+                            font-size: 13px;
+                        }
+
+                        .formTextarea {
+                            min-height: 100px;
+                        }
+                    }
+
+                    .submitBtn {
+                        padding: 16px;
+                        margin-top: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

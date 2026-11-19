@@ -1,0 +1,178 @@
+.aboutSect5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #ffffff;
+    .containerWrapper {
+        width: 94vw;
+        max-width: 1184px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        .contentGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            .leftCol {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                padding-right: 40px;
+                .textContent {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    .sectionSubtitle {
+                        color: #82a8a5;
+                        font-size: 11px;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                    }
+                    .sectionTitle {
+                        color: #111111;
+                        font-family: "Georgia", serif;
+                        font-size: 38px;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        margin: 0;
+                    }
+                    .sectionDesc {
+                        color: #777777;
+                        font-size: 14px;
+                        line-height: 1.6;
+                        margin: 0;
+                    }
+                }
+                .instaImgTall {
+                    width: 100%;
+                    height: 500px;
+                    object-fit: cover;
+                }
+            }
+            .rightCol {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .instaImgSmall {
+                    width: 100%;
+                    height: calc(50% - 15px);
+                    object-fit: cover;
+                }
+            }
+        }
+        .contactBtn {
+            background-color: #799d9b;
+            color: #ffffff;
+            border: none;
+            padding: 16px 36px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            margin-top: 10px;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .aboutSect5 {
+        padding: 60px 0;
+
+        .containerWrapper {
+            gap: 40px;
+
+            .contentGrid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+
+                .leftCol {
+                    padding-right: 0;
+                    gap: 30px;
+
+                    .textContent {
+                        .sectionTitle {
+                            font-size: 32px;
+                        }
+                    }
+
+                    .instaImgTall {
+                        height: 380px;
+                    }
+                }
+
+                .rightCol {
+                    flex-direction: row;
+                    gap: 20px;
+
+                    .instaImgSmall {
+                        width: calc(50% - 10px);
+                        height: 260px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutSect5 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 32px;
+
+            .contentGrid {
+                gap: 20px;
+
+                .leftCol {
+                    gap: 24px;
+
+                    .textContent {
+                        gap: 12px;
+
+                        .sectionTitle {
+                            font-size: 26px;
+
+                            br {
+                                display: none;
+                            }
+                        }
+
+                        .sectionDesc {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .instaImgTall {
+                        height: 280px;
+                    }
+                }
+
+                .rightCol {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .instaImgSmall {
+                        width: 100%;
+                        height: 220px;
+                    }
+                }
+            }
+
+            .contactBtn {
+                width: 100%;
+                max-width: 260px;
+                padding: 14px 28px;
+                margin-top: 0;
+            }
+        }
+    }
+}

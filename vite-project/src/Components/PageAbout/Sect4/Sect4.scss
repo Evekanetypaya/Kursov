@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.glavSect5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 111px;
+    background-color: #ebf3f5;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+    }
+
+    .containerWrapper {
+        width: 900px;
+        max-width: 94vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 34px;
+
+        .headerBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+
+            .subtitle {
+                color: #5f8791;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .mainTitle {
+                color: #111111;
+                font-family: "Playfair Display", serif;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 43px;
+            }
+        }
+
+        .reviewsRow {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 26px;
+
+            .reviewCard {
+                flex: 1;
+                height: 270px;
+                display: flex;
+                flex-direction: column;
+                background-color: #ffffff;
+
+                .reviewText {
+                    flex: 1;
+                    padding: 30px 36px 0;
+                    color: #222222;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 26px;
+                }
+
+                .reviewFooter {
+                    height: 95px;
+                    padding: 0 37px 0 36px;
+                    background-color: #1f2a2d;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .authorBlock {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 14px;
+
+                        .authorAvatar {
+                            width: 60px;
+                            height: 60px;
+                            object-fit: cover;
+                            border: 2px solid #e8e0d8;
+                            display: block;
+                        }
+
+                        .authorInfo {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2px;
+
+                            .authorStars {
+                                width: 60px;
+                                height: auto;
+                                display: block;
+                                margin-bottom: 2px;
+                            }
+
+                            .authorName {
+                                color: #ffffff;
+                                font-family: "Playfair Display", serif;
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 20px;
+                            }
+
+                            .authorCountry {
+                                color: #ffffff;
+                                font-size: 11px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    .quoteIcon {
+                        width: 54px;
+                        height: auto;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .glavSect5 {
+        padding: 60px 0;
+
+        .containerWrapper {
+            gap: 28px;
+
+            .headerBlock {
+                .mainTitle {
+                    font-size: 30px;
+                    line-height: 38px;
+                }
+            }
+
+            .reviewsRow {
+                flex-direction: column;
+                gap: 24px;
+
+                .reviewCard {
+                    height: auto;
+
+                    .reviewText {
+                        padding: 28px 30px;
+                    }
+
+                    .reviewFooter {
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .glavSect5 {
+        padding: 48px 0;
+
+        .containerWrapper {
+            gap: 24px;
+
+            .headerBlock {
+                gap: 8px;
+
+                .mainTitle {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+
+            .reviewsRow {
+                gap: 20px;
+
+                .reviewCard {
+                    .reviewText {
+                        padding: 22px 20px;
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+
+                    .reviewFooter {
+                        height: auto;
+                        padding: 16px 20px;
+
+                        .authorBlock {
+                            gap: 12px;
+
+                            .authorAvatar {
+                                width: 48px;
+                                height: 48px;
+                            }
+
+                            .authorInfo {
+                                .authorStars {
+                                    width: 50px;
+                                }
+
+                                .authorName {
+                                    font-size: 15px;
+                                    line-height: 18px;
+                                }
+                            }
+                        }
+
+                        .quoteIcon {
+                            width: 36px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

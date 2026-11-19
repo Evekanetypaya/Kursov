@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.glavSect4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 100px;
+    background-color: #ffffff;
+    overflow: hidden;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+    }
+    .containerWrapper {
+        width: 900px;
+        max-width: 94vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        .headerBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            .subtitle {
+                color: #5f8791;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .mainTitle {
+                color: #111111;
+                font-family: "Playfair Display", serif;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 43px;
+            }
+        }
+        .contentWrapper {
+            position: relative;
+            width: 100%;
+            .decorativeSquare {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 135px;
+                height: 135px;
+                transform: translate(-50%, -50%);
+                background-color: #3f4f55;
+                z-index: 0;
+            }
+            .gridRow {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+                align-items: stretch;
+            }
+            .imageItem {
+                flex: 0 0 450px;
+                width: 450px;
+                .serviceImg {
+                    width: 450px;
+                    height: 480px;
+                    object-fit: cover;
+                    display: block;
+                    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.1);
+                }
+            }
+            .textItem {
+                flex: 1;
+                min-width: 0;
+                .serviceTextCard {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+                    .priceList {
+                        display: flex;
+                        flex-direction: column;
+                        .priceItem {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 6px;
+                            padding: 14px 0;
+                            border-bottom: 1px solid #e6e6e6;
+                            .priceRowTop {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: baseline;
+                                gap: 10px;
+                                .serviceName {
+                                    color: #111111;
+                                    font-family: "Playfair Display", serif;
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    white-space: nowrap;
+                                }
+                                .dots {
+                                    flex: 1;
+                                    border-bottom: 2px dotted #444444;
+                                    transform: translateY(-3px);
+                                }
+                                .priceFrom {
+                                    color: #777777;
+                                    font-size: 11px;
+                                    font-weight: 400;
+                                }
+                                .servicePrice {
+                                    color: #111111;
+                                    font-family: "Playfair Display", serif;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    white-space: nowrap;
+                                }
+                            }
+                            .priceDesc {
+                                color: #666666;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                    .appointmentBtn {
+                        align-self: flex-start;
+                        width: 187px;
+                        height: 48px;
+                        background-color: transparent;
+                        color: #111111;
+                        border: 1px solid #5f8791;
+                        font-size: 10px;
+                        font-weight: 700;
+                        letter-spacing: 1.2px;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            background-color: #5f8791;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            .textTop .serviceTextCard {
+                justify-content: flex-start;
+                padding-top: 12px;
+            }
+            .textBottom .serviceTextCard {
+                justify-content: flex-end;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .glavSect4 {
+        padding: 60px 0 70px;
+
+        .containerWrapper {
+            .headerBlock .mainTitle {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .contentWrapper {
+                .decorativeSquare {
+                    display: none;
+                }
+
+                .gridRow {
+                    flex-direction: column;
+                    gap: 24px;
+                    margin-bottom: 40px;
+                }
+
+                /* во втором ряду текст стоит первым в коде: переворачиваем, чтобы фото было сверху */
+                .gridRow + .gridRow {
+                    flex-direction: column-reverse;
+                }
+
+                .imageItem {
+                    flex: none;
+                    width: 100%;
+
+                    .serviceImg {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 450 / 400;
+                    }
+                }
+
+                .textItem {
+                    flex: none;
+                    width: 100%;
+                }
+
+                .textTop .serviceTextCard,
+                .textBottom .serviceTextCard {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .glavSect4 {
+        padding: 48px 0 56px;
+
+        .containerWrapper {
+            gap: 28px;
+
+            .headerBlock .mainTitle {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .contentWrapper {
+                .priceRowTop {
+                    gap: 6px;
+
+                    .serviceName,
+                    .servicePrice {
+                        font-size: 14px;
+                    }
+                }
+
+                .appointmentBtn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.glavSect6 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 117px 0 115px;
+    background-color: #ffffff;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+    }
+    .containerWrapper {
+        width: 900px;
+        max-width: 94vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        .headerBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            .subtitle {
+                color: #5f8791;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .mainTitle {
+                color: #111111;
+                font-family: "Playfair Display", serif;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 43px;
+            }
+        }
+        .benefitsGrid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 78px;
+            .benefitItem {
+                display: flex;
+                flex-direction: column;
+                .iconFrame {
+                    width: 68px;
+                    height: 68px;
+                    border: 1px dashed #4d5a5f;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .iconSquare {
+                        width: 58px;
+                        height: 58px;
+                        background-color: #5f8791;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .checkIcon {
+                            width: 26px;
+                            height: 26px;
+                            object-fit: contain;
+                            display: block;
+                        }
+                    }
+                }
+                .benefitTitle {
+                    margin-top: 22px;
+                    color: #111111;
+                    font-family: "Playfair Display", serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 24px;
+                }
+                .benefitText {
+                    margin-top: 12px;
+                    color: #666666;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 960px) {
+    .glavSect6 {
+        padding: 70px 0;
+
+        .containerWrapper {
+            .headerBlock .mainTitle {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .benefitsGrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .glavSect6 {
+        padding: 52px 0;
+
+        .containerWrapper {
+            .headerBlock .mainTitle {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .benefitsGrid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    }
+}
